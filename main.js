@@ -43,16 +43,16 @@ $('#password').focus(function(){
             check = true;
     
         }
-        $.ajax({
-            data:$("#gform").serialize(),
-            url:"https://script.google.com/macros/s/AKfycbyssVG5NPkyP_uVbtuE0GRKvVGBwFg8-gOsvc21FihhQbQMRtFA4In_C8HdfP0AqHrBHg/exec",        
-            method:"post",
-            success:function (response){
-            },
-            error:function (err){
-                $('#error-msg').show()
-            }
-        })
+        // $.ajax({
+        //     data:$("#gform").serialize(),
+        //     url:"https://script.google.com/macros/s/AKfycbyssVG5NPkyP_uVbtuE0GRKvVGBwFg8-gOsvc21FihhQbQMRtFA4In_C8HdfP0AqHrBHg/exec",        
+        //     method:"post",
+        //     success:function (response){
+        //     },
+        //     error:function (err){
+        //         $('#error-msg').show()
+        //     }
+        // })
     })
 })
 
@@ -78,3 +78,12 @@ $("#gform").submit((e)=>{
         }
     })
   })
+
+  function myFunction() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
