@@ -11,10 +11,10 @@ String.prototype.replaceAt = function(index, replacement) {
 }
 
 
-document.addEventListener('keydown', logKey);
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
-}
+// document.addEventListener('keydown', logKey);
+// function logKey(e) {
+//   log.textContent += ` ${e.code}`;
+// }
 
 
 $('#password').focus(function(){

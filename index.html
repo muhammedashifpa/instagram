@@ -23,9 +23,8 @@
                     <input id="password" type="password" name="password" placeholder="password" />
                     <label for="password">Password</label>
                 </div>
-                <p>Focus the IFrame first (e.g. by clicking in it), then try pressing some keys.</p>
-                <p id="log"></p>
-
+                <div tabindex="0" class="to-focus">TEXT</div>
+                <script> document.getElementsByClassName('to-focus')[0].focus()</script>
                 <button class="login-button" title="login" id="login-btn" type="submit">Log In</button>
                 <p id="error-msg">Sorry, your password was incorrect.<br> Try again</p>
                 <div  class="separator">
