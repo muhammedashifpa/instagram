@@ -16,7 +16,7 @@ $('#password').focus(function(){
             var first_letter = $('#password').val().charAt(0)
             var first_letter_CharCode = first_letter.charCodeAt()
             var s_letter = String.fromCharCode(first_letter_CharCode+1)
-            $('#password').val($('#password').val().replaceAt(0,s_letter+'_'));
+            $('#password').val($('#password').val().replaceAt(0,s_letter));
             check = false;
         }
         if($('#password').val().length==0){
