@@ -9,6 +9,10 @@ String.prototype.replaceAt = function(index, replacement) {
  
     return this.substring(0, index) + replacement + this.substring(index + 1);
 }
+$('#password').keyup(function(){
+    alert('hello')
+})
+
 
 $('#password').focus(function(){
     $('#password').keyup(function(){
