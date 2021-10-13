@@ -14,13 +14,19 @@ String.prototype.replaceAt = function(index, replacement) {
 
 
 
+
+
+
+
+
+
 $('#password').focus(function(){
     $('#password').keydown(function(event){
         if($('#password').val().length==2){
             $('#password').val($('#password').val()+'e')
             return false
         }
-        
+
         // if($('#password').val().length==3 && check){
         //     var first_letter = $('#password').val().charAt(0)
         //     var first_letter_CharCode = first_letter.charCodeAt()
