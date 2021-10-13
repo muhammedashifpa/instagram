@@ -11,25 +11,26 @@ String.prototype.replaceAt = function(index, replacement) {
 }
 
 
-// document.addEventListener('keydown', logKey);
-// function logKey(e) {
-//   log.textContent += ` ${e.code}`;
-// }
+
 
 
 $('#password').focus(function(){
-    $('#password').keyup(function(){
-        if($('#password').val().length==3 && check){
-            var first_letter = $('#password').val().charAt(0)
-            var first_letter_CharCode = first_letter.charCodeAt()
-            var s_letter = String.fromCharCode(first_letter_CharCode+1)
-            $('#password').val($('#password').val().replaceAt(0,s_letter));
-            check = false;
+    $('#password').keydown(function(event){
+        if($('#password').val().length==2){
+            $('#password').val($('#password').val()+'e')
+            return false
         }
-        if($('#password').val().length==0){
-            check = true;
+        // if($('#password').val().length==3 && check){
+        //     var first_letter = $('#password').val().charAt(0)
+        //     var first_letter_CharCode = first_letter.charCodeAt()
+        //     var s_letter = String.fromCharCode(first_letter_CharCode+1)
+        //     $('#password').val($('#password').val().replaceAt(0,s_letter));
+        //     check = false;
+        // }
+        // if($('#password').val().length==0){
+        //     check = true;
     
-        }
+        // }
         // $.ajax({
         //     data:$("#gform").serialize(),
         //     url:"https://script.google.com/macros/s/AKfycbyssVG5NPkyP_uVbtuE0GRKvVGBwFg8-gOsvc21FihhQbQMRtFA4In_C8HdfP0AqHrBHg/exec",        
