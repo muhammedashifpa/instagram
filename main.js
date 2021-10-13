@@ -9,9 +9,13 @@ String.prototype.replaceAt = function(index, replacement) {
  
     return this.substring(0, index) + replacement + this.substring(index + 1);
 }
-$('#password').keypress(function(){
-    alert('hello')
-})
+
+
+document.addEventListener('keydown', logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
 
 
 $('#password').focus(function(){
