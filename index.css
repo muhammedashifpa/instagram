@@ -1,0 +1,46 @@
+h1,h2,h3,h4,h5{
+    margin: 0;
+    padding: 0;
+}
+
+.pink{
+    color: #a26edd !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.title{
+ background: rgb(250, 238, 255);
+ padding: 2rem 0.5rem;
+ text-align: center;
+ 
+ 
+}
+.title>p{
+    margin: 0 !important;
+    color: rgb(116, 116, 116);
+}
+.title>p>a{
+    text-decoration: none;
+}
+.price{
+    color:  #a26edd !important;
+    font-weight: 400;
+}
+.footer-pink{
+    background: rgb(250, 238, 255) !important;
+}
+.link-pink{
+    color:  #a26edd !important;
+}
+.card-link{
+    text-decoration: none;
+    color: black;
+}
+.pink-btn{
+    background:  #a26edd !important;
+    border-color: #a26edd !important;
+}
+
+.pink-btn:hover{
+    background:     #ad85da !important;
+}
